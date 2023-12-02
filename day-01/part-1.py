@@ -1,9 +1,9 @@
 # Trebuchet?!
 
 import re
+from typing import List
 
-
-def find_the_answer(inputs: list) -> int:
+def find_the_answer(inputs: List[str]) -> int:
     sum = 0
     for string in inputs:
         matches = re.findall(r'\d', string)
