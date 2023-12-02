@@ -3,9 +3,9 @@
 import re
 
 
-def find_the_answer(input: list) -> int:
+def find_the_answer(inputs: list) -> int:
     sum = 0
-    for string in input:
+    for string in inputs:
         matches = re.findall(r'\d', string)
         sum += int(matches[0] + matches[-1])
 
