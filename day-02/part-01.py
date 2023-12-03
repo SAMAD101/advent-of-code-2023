@@ -38,7 +38,7 @@ def is_valid_game(game: str) -> bool:
 
 if __name__ == '__main__':
     inputs = []
-    with open("inputs.txt", "r") as f:
+    with open("input.txt", "r") as f:
         for line in f:
             inputs.append(line.strip())
 

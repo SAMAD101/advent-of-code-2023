@@ -39,7 +39,7 @@ def find_the_answer(inputs: List[str]) -> int:
 
 if(__name__=='__main__'):
     inputs = []
-    with open("inputs.txt", "r") as f:
+    with open("input.txt", "r") as f:
         for line in f:
             inputs.append(line.strip())
 
