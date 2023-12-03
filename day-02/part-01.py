@@ -31,7 +31,6 @@ def is_valid_game(game: str) -> bool:
     for combination in combinations:
         for key, value in combination.items():
             if value > POSSIBLE_GAME_CONFIGURATIONS[key]:
-                print(combination)
                 return False
 
     return True
