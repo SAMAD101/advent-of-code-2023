@@ -3,6 +3,7 @@
 import re
 from typing import List
 
+
 def find_the_answer(inputs: List[str]) -> int:
     sum: int = 0
     for string in inputs:
