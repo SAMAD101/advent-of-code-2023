@@ -15,7 +15,7 @@ def get_possible_games(inputs: List[str]) -> int:
 
 
 def is_valid_game(game: str) -> bool:
-    POSSIBLE_GAME_CONFIGURATIONS = {
+    POSSIBLE_GAME_CONFIGURATION = {
         "red": 12,
         "green": 13,
         "blue": 14,
@@ -30,7 +30,7 @@ def is_valid_game(game: str) -> bool:
 
     for combination in combinations:
         for key, value in combination.items():
-            if value > POSSIBLE_GAME_CONFIGURATIONS[key]:
+            if value > POSSIBLE_GAME_CONFIGURATION[key]:
                 return False
 
     return True
