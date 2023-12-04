@@ -30,11 +30,11 @@ def get_power_product(game: str) -> bool:
     mred, mgreen, mblue = 1, 1, 1
     for item in combinations:
         for key, value in item.items():
-            if (key == 'red') and value > mred:
+            if (key == 'red') and (value > mred):
                 mred = value
-            elif (key == 'green') and value > mgreen:
+            elif (key == 'green') and (value > mgreen):
                 mgreen = value
-            elif (key == 'blue') and value > mblue:
+            elif (key == 'blue') and (value > mblue):
                 mblue = value
 
     return (mred*mgreen*mblue)
