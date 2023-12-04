@@ -17,22 +17,11 @@ def find_the_answer(inputs: List[str]) -> int:
                 "nine": "9"}
 
     for string in inputs:
-        first = None
-        last = None
-        while(True):
-            match = re.search(r'\d|one|two|three|four|five|six|seven|eight|nine', string)
-            if(match):
-                if not first:
-                    first = match.group(0)
-                    string = string[match.end():]
-                    continue
-                last = match.group(0)
-                string = string[match.end():]
-            else:
-                break
-        if last is None: last = first
-        if first in NUMS_MAP.keys(): first = NUMS_MAP[first]
-        if last in NUMS_MAP.keys(): last = NUMS_MAP[last]
+        matches = re.findall(r'\d|one|two|three|four|five|six|seven|eight|nine', string, re.IGNORECASE)
+        first = matches[0]
+        last = matches[-1]
+        if first in NUMS_MAP: first = NUMS_MAP[first]
+        if last in NUMS_MAP: last = NUMS_MAP[last]
         sum += int(first + last)
 
     return sum

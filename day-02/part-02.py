@@ -27,7 +27,6 @@ def get_power_product(game: str) -> bool:
     combinations = [{re.search(r'[a-z]+', color).group(0): int(re.search(r'[0-9]+', color).group(0)) for color in
                        set.split(", ") for set in sets} for set in sets]
 
-    print(combinations)
     mred, mgreen, mblue = 1, 1, 1
     for item in combinations:
         for key, value in item.items():
